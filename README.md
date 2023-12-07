@@ -6,3 +6,4 @@ This repo is for my UCSD bioinformatics class.
 - Class 05: [Data exploration and visualization in R]
 - Class 06: [ R functions and R packages from CRAN and BioConductor]
 - Class 07: [ Introduction to machine learning for Bioinformatics](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class07/Class07.md)
+- Class 14: [RNA-seq](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2014/Class14.pdf)
