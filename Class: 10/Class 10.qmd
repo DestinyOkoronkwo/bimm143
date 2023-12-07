@@ -1,0 +1,111 @@
+---
+title: "Class 10: Structural Bioinformatics pt 1"
+author: "Destiny (A16340362)"
+format: pdf
+---
+
+#The PDB Database
+
+First lets see what's in the PDB database- the main resposity of protein structures
+
+Downloaded composition stats from: https://www.rcsb.org/
+
+For context: Release 2023_04 of 12-Sept-2023 
+
+
+```{r}
+stats <- read.csv("PDBstats.csv", row.name=1)
+stats
+```
+
+
+```{r}
+x <-  stats$X.ray
+x
+```
+`gsub()` is for pattern replacement, first thing is what you want to replace 
+```{r}
+as.numeric(gsub(",", "", x))
+```
+
+```{r}
+rm.comma <- function(x) {
+   as.numeric(gsub(",", "", x))
+}
+```
+
+```{r}
+rm.comma(stats$EM)
+```
+
+I can use the `apply()` to fix the whole table 
+
+```{r}
+pdbstats <- apply(stats, 2, rm.comma)
+rownames(pdbstats) <- rownames(stats)
+head(pdbstats)
+
+```
+
+>Q1: What percentage of structures in the PDB are solved by X-Ray and Electron Microscopy.
+
+```{r}
+totals <- apply(pdbstats, 2, sum)
+totals
+round(totals/totals["Total"]* 100, 2)
+```
+
+>Q2: What proportion of structures in the PDB are protein?
+
+```{r}
+round(pdbstats[, "Total"] / sum(pdbstats[,"Total"]) *100, 2)
+```
+
+
+>Q3: Type HIV in the PDB website search box on the home page and determine how many HIV-1 protease structures are in the current PDB? SKIPPED
+
+
+>Q4: Water molecules normally have 3 atoms. Why do we see just one atom per water molecule in this structure?
+
+There is a 2 Angstrom structure and hydrogen is not visible at this resolution, You need 1 Angstrom or better to see such a small atoms
+
+
+>Q5: There is a critical “conserved” water molecule in the binding site. Can you identify this water molecule? What residue number does this water molecule have
+
+ water HOH 308
+ 
+Here is a lovely figure of HIP-Pr with the catalytic ASP residues, the MK1 compound and the all important water 308
+
+
+>Q6: Generate and save a figure clearly showing the two distinct chains of HIV-protease along with the ligand. You might also consider showing the catalytic residues ASP 25 in each chain and the critical water (we recommend “Ball & Stick” for these side-chains). Add this figure to your Quarto document.
+
+![](1HSG.png)
+
+##The bio3d package for structueral bioinformatics 
+```{r}
+library(bio3d)
+
+pdb <- read.pdb("1hsg")
+pdb
+```
+```{r}
+head(pdb$atom)
+```
+#Predicting functional motions of a single structure
+
+Lets finish today with a bioinformatics calculation to predict the functional motions of a PDK structure 
+```{r}
+adk <- read.pdb("6s36")
+m <- nma(adk)
+```
+
+```{r}
+plot(m)
+mktrj(m, file="adk_m7.pdb")
+
+```
+
+Class 11 (lab 10pt 2)
+Comparative structure analysis of Adenylate Kinase
+
+We need some packages for todats class. These include `bio3d` and `msa`
