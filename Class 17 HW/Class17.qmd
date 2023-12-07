@@ -1,0 +1,23 @@
+---
+title: "Class 17 HW Plot"
+author: "Destiny (A16340362)"
+format: pdf
+---
+```{r}
+b<-read.csv("~/Documents/BIMM 143/Class 17 HW/mm-second.x.zebrafish.tsv", sep="\t", col.names=c("qseqid", "sseqid", "pident", "length", "mismatch", "gapopen", "qstart", "qend", "sstart", "send", "evalue", "bitscore"))
+```
+
+```{r}
+## Asuming your blast results are stored in an object called 'b'
+plot(b$pident  * (b$qend - b$qstart), b$bitscore)
+```
+```{r}
+library(ggplot2)
+ggplot(b, aes(pident, bitscore)) + geom_point(alpha=0.1) 
+```
+
+```{r}
+ggplot(b, aes((b$pident * (b$qend - b$qstart)), bitscore)) + geom_point(alpha=0.1) + geom_smooth()
+
+```
+
