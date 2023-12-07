@@ -9,6 +9,6 @@ This repo is for my UCSD bioinformatics class.
 
 - Class 07: [ Introduction to machine learning for Bioinformatics](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class07/Class07.md)
 
-- Class 08: 
+- Class 08: [Mini Project](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%208%3A%20Mini%20Project/Class08.pdf)
 
 - Class 14: [RNA-seq](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2014/Class14.pdf)
