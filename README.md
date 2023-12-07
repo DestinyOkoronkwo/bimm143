@@ -23,7 +23,7 @@ This repo is for my UCSD bioinformatics class.
 
 - Class 14: [RNA-seq](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2014/Class14.pdf)
 
-- Class 17: [Essential UNIX for bioinformatics]
+- Class 17: [Essential UNIX for bioinformatics](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2017%20HW/Class17.pdf)
 
 - Class 18: [Analyzing sequencing data in the cloud](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2018/Class-18-EC.pdf)
 
