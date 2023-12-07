@@ -17,4 +17,15 @@ This repo is for my UCSD bioinformatics class.
 
 - Class 11: [Structural Bioinformatics pt 2](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2011/Class-10_pt2.pdf)
 
+- Class 12: [Genome informatics](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Homework%20(Class%2012)/Home-Class-12-questions-.pdf)
+
+- Class 13: [Transcriptomics and the analysis of RNA-Seq data](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2013/Class-13.pdf)
+
 - Class 14: [RNA-seq](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2014/Class14.pdf)
+
+- Class 17: [Essential UNIX for bioinformatics]
+
+- Class 18: [Analyzing sequencing data in the cloud](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2018/Class-18-EC.pdf)
+
+- Class 19: [Vaccination rate mini project](https://github.com/DestinyOkoronkwo/bimm143/blob/main/Class%2019/Class19.pdf)
+  
